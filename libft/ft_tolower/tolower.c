@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int ft_tolower(int a){
+    if (a >= 65 && a <= 92)
+        a += 32;
+    return a;
+}
+
+int main(){
+    char a = 'B';
+    int b = 98;
+
+    printf("%c\n", ft_tolower(a));
+    printf("%c\n", ft_tolower(b));
+}

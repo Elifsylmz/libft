@@ -20,9 +20,11 @@ void *ft_bzero(void *s, size_t n)
     ft_memset(s,0,n);
 }
 
-int main(){
-    int s[] = {256, 7000, 3};
-    size_t n = 1;
-    ft_bzero(s + 1, n);
-    printf("%d - %d - %d\n", s[0], s[1], s[2]);
+int main()
+{
+    int a[] = {2, 3, 99999};
+    ft_bzero(a, 10);
+    printf("%d", a[0]);
+    printf("%d", a[1]);
+    printf("%d", a[2]);
 }

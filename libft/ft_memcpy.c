@@ -6,7 +6,7 @@
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 15:35:07 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/06/02 18:16:54 by eyilmaz          ###   ########.fr       */
+/*   Updated: 2025/06/04 15:18:50 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,13 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
 
 int main()
 {
-	// int dest[10];
-	// const int src[] = {3, 5, 6};
-	// ft_memcpy(dest,src,2);
-	// printf("%d\n", dest[0]);
+	int dest[] = {5,3,5};
+	const int src[] = {255, 5, 6};
+	ft_memcpy(dest,src,2);
+	printf("%d\n", dest[0]);
 	
-	char dest[] = "jkasndkjna";
-	ft_memcpy(dest, "csgsdg", 3);
-	printf("%s\n", dest);
+	// char dest[] = "jka";
+	// ft_memcpy(dest, "csgsdg", 3);
+	// printf("%s\n", dest);
 
 }

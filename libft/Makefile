@@ -4,7 +4,7 @@ NAME = libft.a
 
 CFLAGS = # -Wall -Wextra -Werror
 
-SRCS = ft_bzero.c ft_memset.c
+SRCS = ft_bzero.c ft_memset.c ft_memcpy.c ft_strlen.c
 
 OBJS = $(SRCS.c=.o)
 

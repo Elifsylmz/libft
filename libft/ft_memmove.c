@@ -5,14 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/02 15:47:03 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/06/02 20:03:42 by eyilmaz          ###   ########.fr       */
+/*   Created: 2025/06/04 13:25:28 by eyilmaz           #+#    #+#             */
+/*   Updated: 2025/06/04 15:09:16 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+#include "libft.h"
+#include <string.h>
+
+void 	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char *b;
 	char *a;
@@ -21,24 +23,36 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 	i = 0;
 	b = (char *)dest;
 	a = (char *)src;
-	while(b[i] || a[i])
+	if(b > a)
+		ft_memcpy(b,a,10);
+	elif(a > b)
 	{
-		temp[i] = a[i];
-		a[i] = b[i];
-		b[i] = temp[i];
-		i++;
+		
 	}
 	return(dest);
 }
 
 int main()
 {
-	int dest[10];
-	const int src[] = {3, 5, 2, 4};
-	ft_memmove(dest,src,1);
-	printf("%d\n", dest[0]);
-	printf("%d\n", dest[1]);
-	printf("%d\n", dest[2]);
-	printf("%d\n", dest[3]);
+	char str[100] = "Learningisfun";
+    char *first, *second;
+    first = str;
+    second = str;
+	
+	memmove(second + 5, first, 10);
+    printf("memmove overlap : %s\n ", str);
+	
+	// char dest[5] = "forw";
+    // ft_memmove(dest + 2, "elifsema", ft_strlen(dest) + 8);
+    // // printf("%s\n", dest);
+    // return 0;
 
+	
+	// int dest[10];
+	// const int src[] = {3, 5, 2, 4};
+	// ft_memmove(dest,src,1);
+	// printf("%d\n", dest[0]);
+	// printf("%d\n", dest[1]);
+	// printf("%d\n", dest[2]);
+	// printf("%d\n", dest[3]);
 }

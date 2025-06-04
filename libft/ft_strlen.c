@@ -21,8 +21,8 @@ int ft_strlen(const char* str)
     return len;
 }
 
-int main(){
-    char str[] = "hello";
+// int main(){
+//     char str[] = "hello";
     
-    printf("%d\n", ft_strlen(str));
-}
+//     printf("%d\n", ft_strlen(str));
+// }

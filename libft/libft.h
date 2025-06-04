@@ -6,7 +6,7 @@
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 22:14:01 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/06/02 18:20:42 by eyilmaz          ###   ########.fr       */
+/*   Updated: 2025/06/04 14:47:24 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,7 @@
 
 void *ft_bzero(void *s, size_t n);
 void *ft_memset(void *str, int ch, size_t n);
+void *ft_memcpy(void *dest, const void *src, size_t n);
+int ft_strlen(const char* str);
 
 #endif

@@ -14,13 +14,13 @@
 
 void *ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char *b;
-	char *a;
-	int i;
+	unsigned char *a;
+	unsigned char *b;
+	size_t i;
 	i = 0;
-	b = (char *)dest;
-	a = (char *)src;
-	while(b[i])
+	a = (unsigned char *)src;
+	b = (unsigned char *)dest;
+	while(i < n)
 	{
 		b[i] = a[i];
 		i++;
@@ -28,15 +28,29 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
 	return(dest);
 }
 
-int main()
-{
-	int dest[] = {5,3,5};
-	const int src[] = {255, 5, 6};
-	ft_memcpy(dest,src,2);
-	printf("%d\n", dest[0]);
-	
-	// char dest[] = "jka";
-	// ft_memcpy(dest, "csgsdg", 3);
-	// printf("%s\n", dest);
+// int main()
+// {
+//     char src[] = "Merhaba Dünya!";
+//     char dest[20];  // Yeterli büyüklükte buffer ayır
 
-}
+//     // ft_memcpy ile kopyalama
+//     ft_memcpy(dest, src, 15);  // sizeof(src) hem karakterleri hem null sonlandırıcıyı kopyalar
+
+//     printf("Kaynak: %s\n", src);
+//     printf("Hedef  : %s\n", dest);
+
+//     return 0;
+// }
+
+// int main()
+// {
+// 	int dest[] = {5,3,5};
+// 	const int src[] = {255, 5, 6};
+// 	ft_memcpy(dest,src,2);
+// 	printf("%d\n", dest[0]);
+	
+// 	// char dest[] = "jka";
+// 	// ft_memcpy(dest, "csgsdg", 3);
+// 	// printf("%s\n", dest);
+
+// }

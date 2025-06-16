@@ -17,9 +17,12 @@
 # include <stddef.h>
 # include <stdio.h>
 
+int ft_isalpha(int c);
+int	ft_isdigit(int a);
 void *ft_bzero(void *s, size_t n);
 void *ft_memset(void *str, int ch, size_t n);
 void *ft_memcpy(void *dest, const void *src, size_t n);
 int ft_strlen(const char* str);
+char *ft_strrchr(const char *s, int c);
 
 #endif

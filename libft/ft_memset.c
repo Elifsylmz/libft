@@ -12,17 +12,11 @@
 
 #include "libft.h"
 
-//it is used to set a one-byte value to a memory block byte by byte.
-//void *str --> it is the pointer of the memory location where the memory will be set.
-//int ch --> it is the value that is to be copied to the memory block.
-// size_t n --> it is the number of bytes in the memory block which is set.
-// memset() returns the first address of the memory block from where it starts to set the value.
-
 void *ft_memset(void *str, int ch, size_t n)
 {
-	char *b;
+	unsigned char *b;
 	size_t a = 0;
-	b = (char *)str;
+	b = (unsigned char *)str;
 	while (a < n)
 	{
 		b[a] = ch;
@@ -30,6 +24,18 @@ void *ft_memset(void *str, int ch, size_t n)
 	}
 	return (str);
 }
+
+// int main() {
+
+//     int dizi[10];
+//     ft_memset(dizi, 'A', 5);
+//     int i = 0;
+//     while(dizi[i] != '\0'){
+//         printf("%c\n", dizi[i]);
+//         i++;
+//     }
+
+// }
 
 // int main()
 // {

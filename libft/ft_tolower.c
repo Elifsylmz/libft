@@ -13,7 +13,7 @@
 #include <stdio.h>
 
 int ft_tolower(int a){
-    if (a >= 65 && a <= 92)
+    if (a >= 65 && a <= 90)
         a += 32;
     return a;
 }

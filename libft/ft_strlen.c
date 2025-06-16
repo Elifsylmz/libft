@@ -14,7 +14,7 @@
 
 int ft_strlen(const char* str)
 {
-    int len = 0;
+    size_t len = 0;
     while (str[len] != '\0'){
         len++;
     }
@@ -22,7 +22,7 @@ int ft_strlen(const char* str)
 }
 
 // int main(){
-//     char str[] = "hello";
+//     char str[] = "hello\0 ben";
     
 //     printf("%d\n", ft_strlen(str));
 // }

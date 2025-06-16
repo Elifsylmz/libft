@@ -22,7 +22,7 @@ void *ft_bzero(void *s, size_t n)
 
 int main()
 {
-    int a[] = {2, 3, 99999};
+    int a[] = {2, 3, 20};
     ft_bzero(a, 10);
     printf("%d", a[0]);
     printf("%d", a[1]);

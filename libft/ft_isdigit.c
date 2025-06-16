@@ -10,27 +10,29 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
-int	ft_digit(int a){
 
-	if (a >= 0 && a <= 9)
+int	ft_isdigit(int a)
+{
+
+	if (a >= '0' && a <= '9')
 		return 1;
 	else
 		return 0;
 }
 
-int main(){
-	char deneme = 'a';
-	int den2 = 3;
-	int den3 = 45;
-	int den4 = 0;
-	int den5 = '5';
+// int main(){
+// 	char deneme = 'a';
+// 	int den2 = 3;
+// 	int den3 = 255;
+// 	int den4 = 0;
+// 	char den5 = '5';
 
 
-
-	printf("%d\n", ft_digit(deneme));
-	printf("%d\n", ft_digit(den2));
-	printf("%d\n", ft_digit(den3));
-	printf("%d\n", ft_digit(den4));
-	printf("%d\n", ft_digit(den5));
-}
+// 	printf("%d\n", ft_isdigit(deneme));
+// 	printf("%d\n", ft_isdigit(den2));
+// 	printf("%d\n", ft_isdigit(den3));
+// 	printf("%d\n", ft_isdigit(den4));
+// 	printf("%d\n", ft_isdigit(den5));
+// }

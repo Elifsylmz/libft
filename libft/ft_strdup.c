@@ -1,35 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/17 17:10:48 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/06/17 17:10:50 by eyilmaz          ###   ########.fr       */
+/*   Created: 2025/06/17 17:10:35 by eyilmaz           #+#    #+#             */
+/*   Updated: 2025/06/17 18:43:05 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strncmp(const char *s1, const char *s2, size_t len)
+char	*ft_strdup(const char *s)
 {
-    if(len == 0)
-        return 0;
-    while(len--)
-    {
-        if(*s1 != *s2)
-            return(((unsigned char )*s1 ) - ((unsigned char )*s2));
-        s1++;
-        s2++;
-    }
-    return 0;                         
+	int len;
+	char *dup;
+	size_t i;
+	
+	i = 0;
+	len = ft_strlen(s);
+	dup = (char *) malloc(sizeof(char)*(len+1));
+	if(s == NULL)
+		return NULL;
+	while(s[i])
+	{
+		dup[i] = s[i];
+		i++;
+	}
+	dup[i] = '\0';
+	return(dup);
+	
+	
 }
-
 int main()
 {
-    const char s1[] = "selammmmmmmmmmmmmm";
-    const char s2[] = "selammmm";
-
-    printf("%d\n", ft_strncmp(s1, s2, 20));
+	char s[] = " ";
+	printf("%s\n", ft_strdup(s));
 }

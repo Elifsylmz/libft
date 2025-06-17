@@ -6,7 +6,7 @@
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 22:14:01 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/06/04 14:47:24 by eyilmaz          ###   ########.fr       */
+/*   Updated: 2025/06/17 18:19:46 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <stddef.h>
 # include <stdio.h>
+# include <stdlib.h>
 
 int ft_isalpha(int c);
 int	ft_isdigit(int a);

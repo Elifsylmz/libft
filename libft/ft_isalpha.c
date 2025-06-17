@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalpha.c                                          :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 15:47:20 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/06/02 15:47:20 by eyilmaz          ###   ########.fr       */
+/*   Updated: 2025/06/17 17:32:57 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 #include <stdio.h>
 
 // parametreyi int almamızın sebebi unsigned int, int veya char gönderilse de yani her durumda değeri okuyabilmek ascii olarak da yazılabilir çünki :)
-int     ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-    if ((c <='z' && c >= 'a')||(c <= 'Z' && c >= 'A'))
-        return 1;
-    return 0;
+	if ((c <='z' && c >= 'a')||(c <= 'Z' && c >= 'A'))
+		return 1;
+	return 0;
 } 
 
 // int main(){

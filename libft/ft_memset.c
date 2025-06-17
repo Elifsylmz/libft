@@ -25,6 +25,21 @@ void *ft_memset(void *str, int ch, size_t n)
 	return (str);
 }
 
+int main()
+{
+	int a[] = {5, 2, 4};
+	ft_memset(a, 255, 1);
+	ft_memset(a, 8, 1);
+	printf("%d\n", a[0]);
+}
+
+
+// 2147483647 - 2147483648 = -1
+
+// 2147483647 + 2147483414
+
+
+
 // int main() {
 
 //     int dizi[10];
@@ -36,14 +51,3 @@ void *ft_memset(void *str, int ch, size_t n)
 //     }
 
 // }
-
-// int main()
-// {
-// 	int a[] = {5, 2, 4};
-// 	ft_memset(a, 8, 1);
-// 	printf("%d\n", a[0]);
-// }
-
-// 2147483647 - 2147483648 = -1
-
-// 2147483647 + 2147483414

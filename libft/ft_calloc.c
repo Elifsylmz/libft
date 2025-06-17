@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/17 17:10:48 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/06/17 17:10:50 by eyilmaz          ###   ########.fr       */
+/*   Created: 2025/06/17 17:09:58 by eyilmaz           #+#    #+#             */
+/*   Updated: 2025/06/17 18:23:54 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strncmp(const char *s1, const char *s2, size_t len)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-    if(len == 0)
-        return 0;
-    while(len--)
-    {
-        if(*s1 != *s2)
-            return(((unsigned char )*s1 ) - ((unsigned char )*s2));
-        s1++;
-        s2++;
-    }
-    return 0;                         
+	void *ptr;
+	
+	if(nmemb == 0 || size == 0)
+		return NULL;
+	ptr = malloc(nmemb * size);
+	if (!ptr)
+		return NULL;
+	ft_bzero(ptr, nmemb*size);
+	return ptr;
 }
 
 int main()
 {
-    const char s1[] = "selammmmmmmmmmmmmm";
-    const char s2[] = "selammmm";
-
-    printf("%d\n", ft_strncmp(s1, s2, 20));
+	int *ptr = ft_calloc(5,4);
+	printf("%d\n",ptr[0]);
 }

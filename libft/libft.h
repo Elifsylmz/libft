@@ -6,7 +6,7 @@
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 22:14:01 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/06/17 18:19:46 by eyilmaz          ###   ########.fr       */
+/*   Updated: 2025/06/18 17:07:53 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,7 @@ void *ft_memset(void *str, int ch, size_t n);
 void *ft_memcpy(void *dest, const void *src, size_t n);
 int ft_strlen(const char* str);
 char *ft_strrchr(const char *s, int c);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char *ft_strchr(const char *s, int c);
 
 #endif

@@ -1,40 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/17 17:10:35 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/06/18 16:27:28 by eyilmaz          ###   ########.fr       */
+/*   Created: 2025/06/18 18:56:40 by eyilmaz           #+#    #+#             */
+/*   Updated: 2025/06/18 19:08:01 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char	**ft_split(char const *s, char c)
 {
-	int len;
-	char *dup;
-	size_t i;
-	
-	i = 0;
-	len = ft_strlen(s);
-	dup = (char *) malloc(sizeof(char)*(len+1));
-	if(dup == NULL)
-		return NULL;
-	while(s[i])
-	{
-		dup[i] = s[i];
-		i++;
-	}
-	dup[i] = '\0';
-	return(dup);
-	
 	
 }
+
 int main()
 {
-	char s[] = " ";
-	printf("%s\n", ft_strdup(s));
+	char s[] = "se la m ben ass aaa";
+	char c = ' ';
 }

@@ -6,7 +6,7 @@
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 17:10:40 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/06/17 17:10:41 by eyilmaz          ###   ########.fr       */
+/*   Updated: 2025/06/18 15:32:37 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,35 +14,35 @@
 
 size_t  ft_strlcat(char *dst, const char *src, size_t size)
 {
-    size_t dst_len;
-    size_t src_len;
-    size_t i;
-    i = 0;
+	size_t dst_len;
+	size_t src_len;
+	size_t i;
+	i = 0;
 
-    dst_len = ft_strlen(dst);
-    src_len = ft_strlen(src);
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
 
-    if(size <= dst_len)
-        return(size + src_len);
+	if(size <= dst_len)
+		return(size + src_len);
 
-    while(dst_len + i < size - 1 && src[i])
-    {
-        dst[dst_len + i] = src[i];
-        i++;
-    }
-    dst[dst_len + i] = '\0';
+	while(dst_len + i < size - 1 && src[i])
+	{
+		dst[dst_len + i] = src[i];
+		i++;
+	}
+	dst[dst_len + i] = '\0';
 
-    return(dst_len + src_len);
+	return(dst_len + src_len);
 }
 
 int main()
 {
-    char dst[5] = "";  // temiz buffer
-    const char *src = "Merhaba";
-    size_t len = ft_strlcat(dst, src, 4);
+	char dst[5] = "";  // temiz buffer
+	const char *src = "Merhaba";
+	size_t len = ft_strlcat(dst, src, 4);
 
-    printf("Sonuç string: '%s'\n", dst);
-    printf("Dönen uzunluk: %zu\n", len);  // 0 + 7 = 7
+	printf("Sonuç string: '%s'\n", dst);
+	printf("Dönen uzunluk: %zu\n", len);  // 0 + 7 = 7
 
-    return 0;
+	return 0;
 }

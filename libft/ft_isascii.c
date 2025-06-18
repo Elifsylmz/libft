@@ -13,19 +13,19 @@
 #include <stdio.h>
 
 int ft_isascii(int a){
-    if (a >= 0 && a <= 127)
-        return 1;
-    return 0;
+	if (a >= 0 && a <= 127)
+		return 1;
+	return 0;
 }
 
 
 
 int main()
 {
-    printf("ft_isascii(65): %d\n", ft_isascii(65));     // 'A' → 1
-    printf("ft_isascii(200): %d\n", ft_isascii(200));   // 200 → 0
-    printf("ft_isascii(-1): %d\n", ft_isascii(-1));     // -1 → 0
-    printf("ft_isascii(127): %d\n", ft_isascii(127));   // DEL → 1
+	printf("ft_isascii(65): %d\n", ft_isascii(65));     // 'A' → 1
+	printf("ft_isascii(200): %d\n", ft_isascii(200));   // 200 → 0
+	printf("ft_isascii(-1): %d\n", ft_isascii(-1));     // -1 → 0
+	printf("ft_isascii(127): %d\n", ft_isascii(127));   // DEL → 1
 }
 
 // int main()

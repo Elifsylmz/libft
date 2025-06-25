@@ -6,7 +6,7 @@
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 17:38:36 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/06/18 17:45:19 by eyilmaz          ###   ########.fr       */
+/*   Updated: 2025/06/25 15:46:20 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ int main()
 {
 	char s[] = "aaaelfbbbbb";
 	char set[] = "ab";
-	printf("%s\n", ft_strtrim(s, NULL));
+	printf("%s\n", ft_strtrim(s, set));
 }

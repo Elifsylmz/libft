@@ -14,9 +14,7 @@
 int	word(char const *s, char c)
 {
 	int count;
-	int flag;
-	
-	flag = 0;
+
 	count = 0;
 	while(*s)
 	{
@@ -35,30 +33,43 @@ char	**ft_split(char const *s, char c)
 	int j;
 	int i;
 	int start;
+
+	if(s == NULL)
+		return NULL;
 	
 	j = 0;
 	i = 0;
-	result = malloc(sizeof(char *) * word(s,c) + 1);
+	result = malloc(sizeof(char *) * (word(s,c) + 1));
+	if(!result)
+		return NULL;
 
-	while(*s)
+	while(s[i])
 	{
 		while(s[i] == c)
 			i++;
-		if(s[i] != c)
+		if(s[i])
+		{
 			start = i;
-		while(s[i] != c)
-			i++;
+			while(s[i] && s[i] != c)
+				i++;
 		result[j] = ft_substr(s,start,i-start);
-		j++;
+			j++;
+		}
 	}
+	result[j] = NULL;
 	return(result);
 }
 
 int main()
 {
-	printf("%s\n", ft_split("   elf beb seb  ", ' '));
-	//kelime sayısı
-	//iki boyutlu için alan
-	//tek boyut için alan -- substr kullanılabilir.
-	//substrye gönderilcek aralık
+	char **result = ft_split(" aabena aaelsea aaaifa  ", 'a');
+	int i;
+
+	i = 0;
+	while(result[i])
+	{
+		printf("result[%d] = %s\n", i, result[i]);
+		i++;
+	}
+	free(result);
 }

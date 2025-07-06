@@ -18,9 +18,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int j;
 
 	i = 0;
+	j = ft_strlen(s1);
 	if(!s1 || !set)
 		return NULL;
-	j = ft_strlen(s1);
 	while(ft_strchr(set, s1[i]))
 		i++;
 	while(ft_strchr(set, s1[j]))

@@ -6,48 +6,45 @@
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 15:10:06 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/06/25 15:45:49 by eyilmaz          ###   ########.fr       */
+/*   Updated: 2025/07/06 18:52:58 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+char	*check(char *sub)
+{
+	sub = malloc(sizeof(char));
+	if (!sub)
+		return (NULL);
+	sub[0] = '\0';
+	return (sub);
+}
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *sub;
-	int s_len;
-	size_t i;
-	
+	char	*sub;
+	int		s_len;
+	size_t	i;
+
+	if (!s)
+		return (NULL);
 	s_len = ft_strlen(s);
-	
-	if(!s)
-		return NULL;
-	
-	if(len > s_len - start)
-		len = s_len -start;
-		
-	if(start >= s_len)
+	if (start >= (unsigned int)s_len)
 	{
-		sub = malloc(sizeof(char));
-		sub[0] = '\0';
-		return (sub);
+		check(sub);
 	}
-	sub = (char *) malloc( len + 1);
-	if(!sub)
-		return NULL;
+	if (len > (size_t)(s_len - start))
+		len = s_len - start;
+	sub = (char *)malloc(len + 1);
+	if (!sub)
+		return (NULL);
 	i = 0;
-	while(s[i + start] && i < len)
+	while (s[i + start] && i < len)
 	{
 		sub[i] = s[i + start];
 		i++;
 	}
-	sub[i] = '\0'; 
-	return sub;
+	sub[i] = '\0';
+	return (sub);
 }
-
-// int main()
-// {
-// 	char s[] = "hello world";
-// 	printf("%s\n", ft_substr(s, 4, 6));
-// 	printf("%s\n", ft_substr(s, 3, 9));
-// }

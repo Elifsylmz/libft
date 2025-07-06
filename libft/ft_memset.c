@@ -12,42 +12,17 @@
 
 #include "libft.h"
 
-void *ft_memset(void *str, int ch, size_t n)
+void	*ft_memset(void *str, int ch, size_t n)
 {
-	unsigned char *b;
-	size_t a = 0;
+	unsigned char	*b;
+	size_t			a;
+
+	a = 0;
 	b = (unsigned char *)str;
 	while (a < n)
 	{
-		b[a] = ch;
+		b[a] = (unsigned char)ch;
 		a++;
 	}
 	return (str);
 }
-
-// int main()
-// {
-// 	int a[] = {5, 2, 4};
-// 	ft_memset(a, 255, 1);
-// 	ft_memset(a, 8, 1);
-// 	printf("%d\n", a[0]);
-// }
-
-
-// 2147483647 - 2147483648 = -1
-
-// 2147483647 + 2147483414
-
-
-
-// int main() {
-
-//     int dizi[10];
-//     ft_memset(dizi, 'A', 5);
-//     int i = 0;
-//     while(dizi[i] != '\0'){
-//         printf("%c\n", dizi[i]);
-//         i++;
-//     }
-
-// }

@@ -15,17 +15,8 @@
 //memset belleği istenen değerle dolduruyordu bzero ise belleği sıfırlıyormuş.
 //buffer ile alakalı bir şey vardı araştır!!
 
-void *ft_bzero(void *s, size_t n)
+void	*ft_bzero(void *s, size_t n)
 {
-	ft_memset(s,0,n);
+	ft_memset(s, 0, n);
 	return (s);
 }
-
-// int main()
-// {
-//     int a[] = {2, 3, 20};
-//     ft_bzero(a, 10);
-//     printf("%d", a[0]);
-//     printf("%d", a[1]);
-//     printf("%d", a[2]);
-// }

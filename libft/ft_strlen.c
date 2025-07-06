@@ -12,17 +12,12 @@
 
 #include <stdio.h>
 
-int ft_strlen(const char* str)
+int	ft_strlen(const char *str)
 {
-	size_t len = 0;
-	while (str[len] != '\0'){
-		len++;
-	}
-	return len;
-}
+	int	len;
 
-// int main(){
-//     char str[] = "hello\0 ben";
-	
-//     printf("%d\n", ft_strlen(str));
-// }
+	len = 0;
+	while (str[len] != '\0')
+		len++;
+	return (len);
+}

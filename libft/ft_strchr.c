@@ -6,32 +6,21 @@
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 17:10:32 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/06/18 17:24:45 by eyilmaz          ###   ########.fr       */
+/*   Updated: 2025/07/06 18:51:38 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	while(*s)
+	while (*s)
 	{
-		if(*s == c)
-			return(char *)s;
+		if (*s == (char)c)
+			return ((char *)s);
 		s++;
 	}
-
-	if(c == '\0')
-		return (char *)s;
-
-	else
-	return NULL;
+	if (c == '\0')
+		return ((char *)s);
+	return (NULL);
 }
-
-// int main()
-// {
-// 	const char s[] = "elif sema";
-// 	char c = '\0';
-
-// 	printf("%s\n", ft_strchr(s, c));
-// }

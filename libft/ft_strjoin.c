@@ -6,7 +6,7 @@
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 15:31:28 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/06/18 16:52:30 by eyilmaz          ###   ########.fr       */
+/*   Updated: 2025/07/06 18:51:48 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,39 +14,29 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *join;
-	size_t i;
-	size_t j;
-	int s1_l;
-	int s2_l;
-	
+	char	*join;
+	size_t	i;
+	size_t	j;
+	int		s1_l;
+	int		s2_l;
+
 	s1_l = ft_strlen(s1);
 	s2_l = ft_strlen(s2);
-	
-	join = malloc(sizeof(char)* (s1_l + s2_l + 1));
-	if(!join)
-		return NULL;
-	
+	join = malloc(sizeof(char) * (s1_l + s2_l + 1));
+	if (!join)
+		return (NULL);
 	i = 0;
-	while(i < s1_l)
+	while (i < s1_l)
 	{
 		join[i] = s1[i];
 		i++;
 	}
-	
 	j = 0;
-	while(j < s2_l)
+	while (j < s2_l)
 	{
 		join[i + j] = s2[j];
 		j++;
 	}
 	join[i + j] = '\0';
 	return (join);
-}
-
-int main()
-{
-	char s1[] = "hello";
-	char s2[] = " ben elf";
-	printf("%s\n", ft_strjoin(s1, s2));
 }

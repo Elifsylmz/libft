@@ -6,22 +6,31 @@
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 18:57:22 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/06/18 18:57:23 by eyilmaz          ###   ########.fr       */
+/*   Updated: 2025/07/06 22:44:27 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+#include <stdio.h>
 int main()
 {
-	int a;
-	char *arr = (char *)&a;
 
-	ft_memset(arr, 210, 1);
-	ft_memset(arr + 1, 4, 1);
+	// fatih elif baris ali veli
+	// **
+	// *   *    *    *     *
 
-	printf("%d\n", arr); 
-	// int b =4294966596;
-	// printf("%d\n", b); 
-
+	char *str = " a b c d ";
+	int i = 0;
+	char **res = ft_split(str, ' ');
+	while (res[i])
+	{
+		printf("%s\n", res[i]);
+		res++;
+	}
+	i = 0;
+	while (res[i])
+	{
+		free(res[i]);
+	}
+	
 }

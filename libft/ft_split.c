@@ -6,70 +6,77 @@
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 18:56:40 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/06/25 19:15:46 by eyilmaz          ###   ########.fr       */
+/*   Updated: 2025/07/06 22:42:11 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int	word(char const *s, char c)
+
+static int	word(char const *s, char c)
 {
-	int count;
+	size_t	count;
 
 	count = 0;
-	while(*s)
+	while (*s)
 	{
-		while(*s == c)
+		while (*s == c)
 			s++;
-		if(*s != c && *s)
+		if (*s != c && *s)
 			count++;
-		while(*s != c && *s)
+		while (*s != c && *s)
 			s++;
 	}
-	return(count);
+	return (count);
 }
+
+static void free_func(char **res, int i)
+{
+	while (i >= 0)
+	{
+		free(res[i]);
+		i--;
+	}
+	free(res);
+}
+
+static char	**news(char const *s, char c, char **result)
+{
+	size_t	i;
+	size_t	j;
+	size_t	start;
+
+	i = 0;
+	j = 0;
+	while (s[i])
+	{
+		while (s[i] == c && s[i])
+			i++;
+		if (!s[i])
+			break;
+			start = i;
+		while (s[i] && s[i] != c)
+			i++;
+		result[j] = ft_substr(s, start, i - start);
+		if (!result[j])
+		{
+			free_func(result, j);
+			return (NULL);
+		}
+		j++;
+	}
+	result[j] = NULL;
+	return (result);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
-	int j;
-	int i;
-	int start;
 
-	if(s == NULL)
-		return NULL;
-	
-	j = 0;
-	i = 0;
-	result = malloc(sizeof(char *) * (word(s,c) + 1));
-	if(!result)
-		return NULL;
-
-	while(s[i])
-	{
-		while(s[i] == c)
-			i++;
-		if(s[i])
-		{
-			start = i;
-			while(s[i] && s[i] != c)
-				i++;
-		result[j] = ft_substr(s,start,i-start);
-			j++;
-		}
-	}
-	result[j] = NULL;
-	return(result);
-}
-
-int main()
-{
-	char **result = ft_split(" aabena aaelsea aaaifa  ", 'a');
-	int i;
-
-	i = 0;
-	while(result[i])
-	{
-		printf("result[%d] = %s\n", i, result[i]);
-		i++;
-	}
-	free(result);
+	if (s == NULL)
+		return (NULL);
+	result = malloc(sizeof(char *) * (word(s, c) + 1));
+	if (!result)
+		return (NULL);
+	news(s, c, result);
+	return (result);
 }

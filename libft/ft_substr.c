@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*check(char *sub)
+static char	*check(char *sub)
 {
 	sub = malloc(sizeof(char));
 	if (!sub)

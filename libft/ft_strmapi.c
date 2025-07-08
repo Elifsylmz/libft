@@ -44,10 +44,10 @@ char to_upper(unsigned int i, char c)
 	return (c);
 }
 
-int main()
-{
-	char *s = "elifsema";
-	char *new_str = ft_strmapi(s, to_upper);
+// int main()
+// {
+// 	char *s = "elifsema";
+// 	char *new_str = ft_strmapi(s, to_upper);
 	
-	printf("%s\n", new_str);
-}
+// 	printf("%s\n", new_str);
+// }

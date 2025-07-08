@@ -29,7 +29,7 @@ static int	word(char const *s, char c)
 	return (count);
 }
 
-static void free_func(char **res, int i)
+static void	free_func(char **res, int i)
 {
 	while (i >= 0)
 	{
@@ -52,8 +52,8 @@ static char	**news(char const *s, char c, char **result)
 		while (s[i] == c && s[i])
 			i++;
 		if (!s[i])
-			break;
-			start = i;
+			break ;
+		start = i;
 		while (s[i] && s[i] != c)
 			i++;
 		result[j] = ft_substr(s, start, i - start);
@@ -77,6 +77,5 @@ char	**ft_split(char const *s, char c)
 	result = malloc(sizeof(char *) * (word(s, c) + 1));
 	if (!result)
 		return (NULL);
-	news(s, c, result);
-	return (result);
+	return (news(s, c, result));
 }

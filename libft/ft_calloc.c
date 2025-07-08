@@ -24,3 +24,4 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(ptr, nmemb * size);
 	return (ptr);
 }
+//mainde işin bittiğinde free(yer açıp kullandığın değişken)

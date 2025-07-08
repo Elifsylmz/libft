@@ -12,25 +12,32 @@
 
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	size_t i;
+	size_t	i;
 
+	if (!s || !f)
+		return ;
 	i = 0;
-	while(s[i])
+	while (s[i])
 	{
-		s[i] = f(i, s[i]);
-		s++;
+		f(i, &s[i]);
+		i++;
 	}
 }
 
-char *to_upper(unsigned int i, char)
-{
-	(void)i;
-	char a;
 
-	a = char;
-	if (a >= 97 && a <= 122)
-		a = a - 32;
-	return (a);
-}
+// static void	to_upper(unsigned int i, char *c)
+// {
+// 	(void)i;
+// 	if (*c >= 'a' && *c <= 'z')
+// 		*c = *c - 32;
+// 	}
+
+// int main()
+// {
+// 	char s[] = "elifsema";
+// 	ft_striteri(s, to_upper);
+	
+// 	printf("%s\n", s);
+// }

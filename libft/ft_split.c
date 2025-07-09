@@ -57,7 +57,7 @@ static char	**news(char const *s, char c, char **result)
 		while (s[i] && s[i] != c)
 			i++;
 		result[j] = ft_substr(s, start, i - start);
-		if (!result[j])
+		if (!result[j]) 
 		{
 			free_func(result, j);
 			return (NULL);

@@ -6,7 +6,7 @@
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 17:10:32 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/07/06 18:51:38 by eyilmaz          ###   ########.fr       */
+/*   Updated: 2025/07/09 21:44:28 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s)
+	size_t	i;
+
+	i = 0;
+	while (s[i])
 	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
+		if (s[i] == (char)c)
+			return ((char *)(s + i));
+		i++;
 	}
-	if (c == '\0')
-		return ((char *)s);
+	if (s[i] == (char)c)
+		return ((char *)(s + i));
 	return (NULL);
 }

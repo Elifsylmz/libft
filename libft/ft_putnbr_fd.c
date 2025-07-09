@@ -6,7 +6,7 @@
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 15:40:47 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/07/06 18:58:50 by eyilmaz          ###   ########.fr       */
+/*   Updated: 2025/07/09 20:52:22 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,3 @@ void	ft_putnbr_fd(int n, int fd)
 	c = (n % 10) + '0';
 	write(fd, &c, 1);
 }
-
-
-// int main()
-// {
-//     ft_putnbr_fd(42, 1);
-//     write(1, "\n", 1);
-//     ft_putnbr_fd(-1247483648, 1);
-//     write(1, "\n", 1);
-//     ft_putnbr_fd(-124234, 1);
-//     write(1, "\n", 1);
-// }
-
-

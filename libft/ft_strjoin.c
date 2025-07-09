@@ -6,7 +6,7 @@
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 15:31:28 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/07/06 18:51:48 by eyilmaz          ###   ########.fr       */
+/*   Updated: 2025/07/09 21:23:49 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*join;
 	size_t	i;
 	size_t	j;
-	int		s1_l;
-	int		s2_l;
+	size_t	s1_l;
+	size_t	s2_l;
 
 	s1_l = ft_strlen(s1);
 	s2_l = ft_strlen(s2);

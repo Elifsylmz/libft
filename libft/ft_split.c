@@ -6,7 +6,7 @@
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 18:56:40 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/07/06 22:42:11 by eyilmaz          ###   ########.fr       */
+/*   Updated: 2025/07/09 20:50:07 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static char	**news(char const *s, char c, char **result)
 		while (s[i] && s[i] != c)
 			i++;
 		result[j] = ft_substr(s, start, i - start);
-		if (!result[j]) 
+		if (!result[j])
 		{
 			free_func(result, j);
 			return (NULL);

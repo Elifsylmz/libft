@@ -1,6 +1,6 @@
 NAME = libft.a
 CC = cc 
-CFLAGS = # -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
 
 SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
@@ -25,6 +25,4 @@ fclean:	clean
 
 re:	fclean all
 
-exc: $(NAME)
-	cc main.c $(NAME) -o DENEME
-	./DENEME
+.PHONY: all fclean clean re

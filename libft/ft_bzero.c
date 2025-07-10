@@ -12,11 +12,7 @@
 
 #include "libft.h"
 
-//memset belleği istenen değerle dolduruyordu bzero ise belleği sıfırlıyormuş.
-//buffer ile alakalı bir şey vardı araştır!!
-
-void	*ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(s, 0, n);
-	return (s);
+	ft_memset(s, '\0', n);
 }

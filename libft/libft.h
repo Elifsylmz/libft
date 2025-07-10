@@ -20,7 +20,7 @@
 # include <fcntl.h>
 
 int		ft_atoi(const char *nptr);
-void	*ft_bzero(void *s, size_t n);
+void    ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 int		ft_isalnum(int a);
 int		ft_isalpha(int c);

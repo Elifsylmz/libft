@@ -6,7 +6,7 @@
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 22:14:01 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/07/09 20:49:02 by eyilmaz          ###   ########.fr       */
+/*   Updated: 2025/07/10 18:16:46 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,10 @@
 # define LIBFT_H
 
 # include <stdlib.h>
-# include <stdio.h>
 # include <unistd.h>
-# include <fcntl.h>
-# include <fcntl.h>
 
 int		ft_atoi(const char *nptr);
-void    ft_bzero(void *s, size_t n);
+void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 int		ft_isalnum(int a);
 int		ft_isalpha(int c);

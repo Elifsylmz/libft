@@ -25,7 +25,6 @@ fclean:	clean
 	rm -rf $(NAME)
 
 re:	fclean all
-
 exc: $(NAME)
 	cc main.c $(NAME) -o DENEME
 	./DENEME

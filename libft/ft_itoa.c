@@ -6,7 +6,7 @@
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 15:40:57 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/07/06 18:44:28 by eyilmaz          ###   ########.fr       */
+/*   Updated: 2025/07/10 17:15:35 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,15 +58,15 @@ char	*ft_itoa(int n)
 {
 	int		len;
 	long	nb;
-	char	*newn;
-	int		lencont;
+	char	*new_n;
+	int		len_cont;
 
 	nb = n;
 	len = ft_number_len(nb);
-	lencont = len;
-	newn = malloc(sizeof(char) * (len + 1));
-	if (!newn)
+	len_cont = len;
+	new_n = malloc(sizeof(char) * (len + 1));
+	if (!new_n)
 		return (NULL);
-	ft_number(nb, newn, lencont, len);
-	return (newn);
+	ft_number(nb, new_n, len_cont, len);
+	return (new_n);
 }

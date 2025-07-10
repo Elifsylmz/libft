@@ -6,13 +6,13 @@
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 18:56:40 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/07/09 20:50:07 by eyilmaz          ###   ########.fr       */
+/*   Updated: 2025/07/10 17:47:33 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	word(char const *s, char c)
+static int	ft_count_word(char const *s, char c)
 {
 	size_t	count;
 
@@ -29,7 +29,7 @@ static int	word(char const *s, char c)
 	return (count);
 }
 
-static void	free_func(char **res, int i)
+static void	ft_free_func(char **res, int i)
 {
 	while (i >= 0)
 	{
@@ -39,7 +39,7 @@ static void	free_func(char **res, int i)
 	free(res);
 }
 
-static char	**news(char const *s, char c, char **result)
+static char	**ft_new_s(char const *s, char c, char **result)
 {
 	size_t	i;
 	size_t	j;
@@ -59,7 +59,7 @@ static char	**news(char const *s, char c, char **result)
 		result[j] = ft_substr(s, start, i - start);
 		if (!result[j])
 		{
-			free_func(result, j);
+			ft_free_func(result, j);
 			return (NULL);
 		}
 		j++;
@@ -74,8 +74,8 @@ char	**ft_split(char const *s, char c)
 
 	if (s == NULL)
 		return (NULL);
-	result = malloc(sizeof(char *) * (word(s, c) + 1));
+	result = malloc(sizeof(char *) * (ft_count_word(s, c) + 1));
 	if (!result)
 		return (NULL);
-	return (news(s, c, result));
+	return (ft_new_s(s, c, result));
 }

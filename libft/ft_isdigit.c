@@ -6,12 +6,9 @@
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 15:47:28 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/07/06 16:09:33 by eyilmaz          ###   ########.fr       */
+/*   Updated: 2025/07/10 17:12:53 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
-#include <stdio.h>
 
 int	ft_isdigit(int a)
 {

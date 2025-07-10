@@ -6,7 +6,7 @@
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 17:10:35 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/07/06 18:51:43 by eyilmaz          ###   ########.fr       */
+/*   Updated: 2025/07/10 18:33:26 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 char	*ft_strdup(const char *s)
 {
-	int		len;
 	char	*dup;
 	size_t	i;
+	size_t	len;
 
 	i = 0;
 	len = ft_strlen(s);
 	dup = (char *)malloc(sizeof(char) * (len + 1));
-	if (dup == NULL)
+	if (!dup)
 		return (NULL);
 	while (s[i])
 	{

@@ -6,14 +6,11 @@
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 15:40:47 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/07/09 20:52:22 by eyilmaz          ###   ########.fr       */
+/*   Updated: 2025/07/10 17:31:11 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
-
-#include <unistd.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {

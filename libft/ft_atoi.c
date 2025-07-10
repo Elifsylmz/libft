@@ -6,11 +6,9 @@
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 17:10:06 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/07/06 15:44:44 by eyilmaz          ###   ########.fr       */
+/*   Updated: 2025/07/10 17:10:54 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {

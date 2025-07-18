@@ -6,7 +6,7 @@
 /*   By: eyilmaz <eyilmaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 15:40:34 by eyilmaz           #+#    #+#             */
-/*   Updated: 2025/07/10 18:13:31 by eyilmaz          ###   ########.fr       */
+/*   Updated: 2025/07/10 19:48:57 by eyilmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,4 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	result[i] = '\0';
 	return (result);
-}
-
-char	ft_to_upper(unsigned int i, char c)
-{
-	(void)i;
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
 }
